@@ -5,15 +5,25 @@
 	<script>
 	function timeMessage() {
 		var t=setTimeout("alertMessage()",3000);
-                document.write("<h2>Le compte a rebours est lance ...</h2>");
+		
+		var elt = document.getElementById("resultat");
+		elt.innerHTML = "Explosion dans : " + Interval();
 	} // timeMessage
 	function alertMessage() {
-		alert("Délai écoule !");
+		alert("Delai ecoule !");
 	} // alertMessage	
+	
+	function Interval() {
+			for
+	}
 	</script>
 </head>
  
 <body>
-<script>timeMessage();</script>
+<p>Cliquez sur le bouton pour lancer la fonction : <button onclick="timeMessage()">Lancer la fonction</button></p>
+
+<div id="resultat"></div>
+ 
+	
 </body>
 </html>
