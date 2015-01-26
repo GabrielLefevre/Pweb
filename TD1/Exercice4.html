@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Exemple timer simple</title>
+	<script>
+	function timeMessage() {
+		var t=setTimeout("alertMessage()",3000);
+                document.write("<h2>Le compte a rebours est lance ...</h2>");
+	} // timeMessage
+	function alertMessage() {
+		alert("Délai écoule !");
+	} // alertMessage	
+	</script>
+</head>
+ 
+<body>
+<script>timeMessage();</script>
+</body>
+</html>
