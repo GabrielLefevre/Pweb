@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Retour sur les tableaux</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <script>
+	function afficherTableau() 
+	{  
+		var tab = new Array(10);
+		tab[-3]=6;
+		tab[15]=5;
+		tab[19]=5;
+		tab["aa"]=17;
+		var i =0;
+		for (i in tab) {
+			document.write(tab[i] + "<br/>");
+		}
+		document.write("taille du tableau : " + tab.length);
+	}	  
+
+  </script>
+</head>
+
+<body> 
+  <script>afficherTableau();</script>
+</body>
+</html>
