@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Ecriture d'une fonction simple</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <script>
+	function changeTexte() {
+		var element = document.getElementById("Affichage");
+		var texte = document.getElementById("Texte").value;
+		element.innerHTML=texte;
+	}
+  </script>
+</head>
+<body>
+ 
+<h1>Ecriture d'une fonction simple</h1>
+<textarea id="Texte" onFocus="this.value=''"></textarea>
+<div id="Affichage"> Texte à remplacer </div>
+ <p><button onclick="changeTexte()">Lancer la fonction</button></p>
+
+</body>
+</html>
