@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title> Calculatrice</title>
+        <script>
+ 
+			Math.puissance2 = function(x) {
+				return x*x;
+			}
+ 
+            function resultat() {
+				var z = document.getElementById('z');
+				var val = eval(z.value);
+            }
+ 
+            function touche(t) {
+                var z = document.getElementById('z');
+                z.value += t;
+            }
+ 
+            function special(nom) {
+				var z = document.getElementById('z');
+				var val = eval(z.value);
+				var fct='Math.'+nom;
+				z.value = eval(fct+'('+val+')');
+            }
+        </script>
+    </head>
+    <body>
+        <form action='#' method='GET' onSubmit='resultat();return false;'>
+            <input type='text' name='zone' id='z' /><br />
+            <input type='button' value='1' onClick='touche(1)' />
+            <input type='button' value='2' onClick='touche(2)' />
+            <input type='button' value='3' onClick='touche(3)' />
+            <input type='button' value='+' onClick='special("+")' />
+            <button type="reset">C</button><br/>
+            <input type='button' value='4' onClick='touche(4)' />
+            <input type='button' value='5' onClick='touche(5)' />
+            <input type='button' value='6' onClick='touche(6)' />
+            <input type='button' value='-' onClick='special("-")' /><br/>
+            <input type='button' value='7' onClick='touche(7)' />
+            <input type='button' value='8' onClick='touche(8)' />
+            <input type='button' value='9' onClick='touche(9)' />
+            <input type='button' value='*' onClick='special("*")' /><br/>
+            
+
+            
+            <input type='button' value='carr' onClick='special("puissance2")' />
+            <input type='button' value='sqrt' onClick='special(sqrt)' />
+            <input type='button' value='/' onClick='special("/")' />
+            <input type='submit' value='='/><br/>
+            
+
+        </form>
+    </body>
+</html>
