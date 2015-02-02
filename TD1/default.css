@@ -1,0 +1,30 @@
+.gauche {
+background-color:red;
+width:50%;
+float:left;
+
+}
+
+.gauche input{
+width: 75%;
+display: block;
+}
+
+.gauche textarea{
+width: 75%;
+display: block;
+resize: vertical;
+min-height: 25px;
+max-height: 150px;
+}
+
+.droite {
+background-color:green;
+float:right;
+width:50%;
+}
+
+.droite img{
+	width: 50%;
+	padding: 25%;	
+}

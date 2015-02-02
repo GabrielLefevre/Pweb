@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso8859-1">
+<!DOCTYPE HTML>
+<html xml:lang="fr" lang="fr">
+<head>
+   <title>formulaire et javascript</title>	
+   <link rel="stylesheet" type="text/css" href="default.css" media="screen"/>
+</head>	
+	
+	
+<script>
+	function valider () {
+		// test du champ nom
+		var saisie = document.getElementById("nom");
+		if(saisie.value=="") {
+			saisie.style.backgroundColor='red';
+			return false;
+		} 
+		else {
+			saisie.style.backgroundColor='white';
+		}
+		return true;
+	}
+</script>
+	
+	
+	
+	
+<body>
+	<div class="gauche">
+		<form action="go.php" onsubmit="return valider()" method="get" name="td1exo6" autocomplete="off">
+		  <label>Nom(*) :</label> </span><input type="text" name="nom" id="nom" />       <br />
+		  <label>Prénom :</label> <textarea type="text" name="prenom" id="prenom"></textarea> <br />
+		  <label>mail (*) :</label> <input type="text" name="mail" id="mail" /> <br />
+		  <label>code Postal (*) :</label> <input type="text" name="cp" id="cp" /> <br />
+		  <label> Ville (*) :</label> <input type="text" name="ville" id="ville" /> <br />
+		  <button type="submit" >Valider</button><br />
+		
+		<p>* : champs obligatoires</p>
+		
+	</div>
+	
+	<div class ="droite">
+			<img src="http://blog.jebouquine.com/wp-content/uploads/2013/08/la-banane.jpg" alt="banane" >
+</form>
+
+	</div>
+</body>
+</html>
