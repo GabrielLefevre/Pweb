@@ -2,7 +2,9 @@
 background-color:red;
 width:50%;
 float:left;
-
+/*
+Div de la partie gauche de l'écran 
+*/
 }
 
 .gauche input{
@@ -22,6 +24,9 @@ max-height: 150px;
 background-color:green;
 float:right;
 width:50%;
+/*
+div de la partie droite de l'écran
+*/
 }
 
 .droite img{
