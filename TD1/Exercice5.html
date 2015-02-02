@@ -13,6 +13,10 @@
 				return x*x*x;
 			 }
 			 
+			 Math.log = function(x) {
+				 return log(x);
+			 }
+			 
 			 
  
             function resultat() {
@@ -40,20 +44,22 @@
             <input type='button' value='2' onClick='touche(2)' />
             <input type='button' value='3' onClick='touche(3)' />
             <input type='button' value='+' onClick='touche("+")' />
-            <button type="reset">C</button><br/>
+            <input type='button' value='*' onClick='touche("*")' /><br/>
             <input type='button' value='4' onClick='touche(4)' />
             <input type='button' value='5' onClick='touche(5)' />
             <input type='button' value='6' onClick='touche(6)' />
+            <input type='button' value='/' onClick='touche("/")' />
             <input type='button' value='-' onClick='touche("-")' /><br/>
             <input type='button' value='7' onClick='touche(7)' />
             <input type='button' value='8' onClick='touche(8)' />
             <input type='button' value='9' onClick='touche(9)' />
-            <input type='button' value='*' onClick='touche("*")' /><br/>
+            <input type='submit' value='=' onClick='resultat()'/> <br/>
             <input type='button' value='²' onClick='special("puissance2")' />
             <input type='button' value='³' onClick='special("puissance3")' />
+            <input type='button' value='log' onClick='special("log")' />
             <input type='button' value='sqrt' onClick='special(sqrt)' />
-            <input type='button' value='/' onClick='touche("/")' />
-            <input type='submit' value='=' onClick='resultat()'/><br/>
+			<button type="reset">C</button><br/>
+
             
 
         </form>
