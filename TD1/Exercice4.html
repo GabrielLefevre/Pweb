@@ -1,29 +1,65 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Exemple timer simple</title>
-	<script>
-	function timeMessage() {
-		var t=setTimeout("alertMessage()",3000);
-		
-		var elt = document.getElementById("resultat");
-		elt.innerHTML = "Explosion dans : " + Interval();
-	} // timeMessage
-	function alertMessage() {
-		alert("Delai ecoule !");
-	} // alertMessage	
-	
-	function Interval() {
-			for
-	}
-	</script>
+<title> Compte à Rebours</title>
+<script>
+// definition des constantes
+var VALEUR_PAR_DEFAUT  = 10;
+var ON  = 1; 
+var OFF = 0;
+ 
+// variables globales
+var cpt;
+var t;
+var active;
+ 
+function clicCompteur() {
+  cpt=cpt-1;
+  document.getElementById('compteur').value=cpt;
+  if (cpt > 0) t=setTimeout("clicCompteur()",1000);
+}//clicCompteur
+ 
+function demarrer() {
+  if (! active) {
+    active=ON;
+    clicCompteur();
+  }
+}//demarrer
+ 
+function arreter() {
+  clearTimeout(t);
+  active=OFF;
+}// arreter
+ 
+function initialiser () {
+  var val = document.getElementById("compteur").value;
+  if (isNaN(val)) cpt = VALEUR_PAR_DEFAUT ;
+  else {
+    cpt = parseInt(val,10);
+	if (cpt<0) {
+	   cpt = VALEUR_PAR_DEFAUT;
+	   document.getElementById('compteur').value=cpt;
+	}   
+  }
+}// initialiser
+ 
+function init() {
+  cpt = VALEUR_PAR_DEFAUT;
+  active = OFF; 
+  document.getElementById("compteur").value=cpt;
+}// init
+ 
+ 
+</script>
 </head>
  
-<body>
-<p>Cliquez sur le bouton pour lancer la fonction : <button onclick="timeMessage()">Lancer la fonction</button></p>
-
-<div id="resultat"></div>
+<body onload="init()">
  
-	
+<form id="form">
+<input type="text" id="compteur" />
+<input type="button" value="Initialiser" onclick="initialiser()" />
+<input type="button" value="Demarrer" onclick="demarrer()" />
+<input type="button" value="Arreter" onclick="arreter()" />
+</form>
 </body>
 </html>
