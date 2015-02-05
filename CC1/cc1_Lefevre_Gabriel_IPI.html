@@ -1,0 +1,45 @@
+  <!-- Gabriel Lefevre IPI -->
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <title> CC1 : 05/02/2015 </title>
+            <script>
+                function changeTexteBas() {
+		var element = document.getElementById("zbas");
+		var texte = document.getElementById("zhaut").value;
+		element.innerHTML=texte;
+	}
+	 function changeTexteHaut() {
+		var element = document.getElementById("zhaut");
+		var texte = document.getElementById("zbas").value;
+		element.innerHTML=texte;
+	}
+	function permuter() {
+		var elementHaut = document.getElementById("zhaut");
+		var elementBas = document.getElementById("zbas");
+		var tmp = document.getElementById("zbas").value;
+		var bas = document.getElementById("zhaut").value;
+		var haut =tmp;
+		elementHaut.innerHTML=haut;
+		elementBas.innerHTML=bas;
+	}
+            </script>
+        </head>
+        <body>
+            <div>
+                    zone texte haut :<br>
+                <textarea id="zhaut" rows="4" cols="50">
+                    Le texte du haut
+                </textarea>
+            </div>         
+                <input type='button' value='&uarr;' onclick="changeTexteHaut()" />
+                <input type='button' value='&darr;'  onclick="changeTexteBas()" />
+                <input type='button' value='&varr;'  onclick="permuter()"/>  
+            <div>
+                    zone texte bas :<br>
+                <textarea id="zbas" rows="4" cols="50">
+                    le texte du bas
+                </textarea>
+            </div>
+        </body>
+    </html>
