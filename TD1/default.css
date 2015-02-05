@@ -22,15 +22,29 @@ max-height: 150px;
 }
 
 .droite {
-background-color:green;
+background-color:white;
 float:right;
 width:50%;
 /*
 div de la partie droite de l'écran
 */
 }
-
 .droite img{
 	width: 50%;
-	padding: 25%;	
+	padding: 25%;
 }
+
+.droite img:hover{
+	width: 50%;
+	padding: 25%;
+	
+    -webkit-animation:spin 0.5s linear infinite;
+    -moz-animation:spin 0.5s linear infinite;
+    animation:spin 0.5s linear infinite;
+}
+
+
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
