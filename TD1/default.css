@@ -3,9 +3,7 @@
 width:50%;
 float:left;
 color:white;
-/*
-Div de la partie gauche de l'écran 
-*/
+background-color:#fff;
 }
 
 .gauche input{
@@ -30,17 +28,30 @@ div de la partie droite de l'écran
 */
 }
 
-img{
+.droite img{
 	width: 50%;
 	padding: 25%;
 	
-    -webkit-animation:spin 0.5s linear infinite;
-    -moz-animation:spin 0.5s linear infinite;
-    animation:spin 0.5s linear infinite;
+    -webkit-animation:spin 1s linear infinite;
+    -moz-animation:spin 1s linear infinite;
+    animation:spin 1s linear infinite;
 }
 
 
+.gauche img{
+	width: 50%;
+	padding: 25%;
+	
+    -webkit-animation:spin2 8s linear infinite;
+    -moz-animation:spin2 8s linear infinite;
+    animation:spin2 8s linear infinite;
+}
 
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+@-moz-keyframes spin2 { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin2 { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin2 { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
