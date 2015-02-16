@@ -1,3 +1,7 @@
+body {
+cursor: url('avatar.cur'), pointer;
+}
+
 .gauche {
 
 width:50%;

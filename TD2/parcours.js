@@ -21,15 +21,19 @@ function getInnerText(node) {
 function parcours() {
     var text = getInnerText(document.getElementById('fragmentRoot'));
     var results = document.getElementById('results');
+    var br = document.createElement('br');
+    var hachin = document.createElement('h1');
     if (results.hasChildNodes())
         results.firstChild.nodeValue = text;
     else {
         var txt = document.createTextNode(text);
         results.appendChild(txt);
     }
-    var br = document.createElement('br');
+
     var nodeRemarque = document.createTextNode("mais le contenu du bouton ne s'affiche pas .... pourquoi ?");
      results.appendChild(nodeRemarque);
+     results.appendChild(br);
+     results.appendChild(hachin);
     results.style.display = '';
 } // demo
  
