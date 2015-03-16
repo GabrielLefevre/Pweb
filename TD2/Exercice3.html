@@ -2,31 +2,25 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="default.css" media="screen"/>
         <title> Calculatrice</title>
-        <script>
-            // On ajoute une fonction supplémentaire à la classe Math
-            Math.puissance2 = function(x) {
-                return x * x;
-            }
-            function resultat() {
-                var z = document.getElementById('z');
-                z.value = eval(z.value);
-            }
- 
-            function touche(t) {
-                var z = document.getElementById('z');
-                z.value += t;
-            }
- 
-            function special(nom) {
-                var z = document.getElementById('z');
-                var val = eval(z.value);
-                var fct = 'Math.' + nom;
-                z.value = eval(fct + '(' + val + ')');
-            }
-        </script>
     </head>
-    <body>
+    <body onload="menu(5);">
+		<div id="menu"> 
+			 <h2>Menu</h2> 
+			 <div id="centre">
+			  Centre   
+		 </div>
+
+		 <ul>
+		  <li id="item1">Menu 1</li>
+		  <li id="item2">Menu 2</li>
+		  <li id="item3">Menu 3</li>
+		  <li id="item4">Menu 4</li>
+		  <li id="item5">Menu 5</li> 
+		 </ul>
+		</div>
+		
 		<form action='#' id="calculatrice" method='GET' onSubmit='resultat();return false;'>
             <input type='text' name='zone' id='z' /><br />
             <input type='button' value='7' onClick='touche(7)' />
@@ -58,4 +52,5 @@
 
 
     </body>
+    <script src="calculatrice.js"></script>
 </html>

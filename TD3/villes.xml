@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<france>
+  <ville>
+     <code>62300</code>
+     <nom>Lens</nom>
+  </ville>
+  <ville>
+     <code>59000</code>
+     <nom>Lille</nom>
+  </ville>
+  <ville>
+     <code>62400</code>
+     <nom>Béthune</nom>
+  </ville>
+</france>
