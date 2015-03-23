@@ -8,12 +8,16 @@
 <script  src="exercice3.js"></script>
 </head>
 <body>
-<FORM name="ajax" method="POST" action="">   
-    Liste de mots servant à l'autocomplétion : <br/>
-    <input type=text name ="liste" size=100 id="liste" value="Choix1 Choix2 Choix3"> 
-    <INPUT type="BUTTON" id="button" value="Sélectionner"><br/>
-    Champs (autoComplétion): <input type=text name ="champs" id="tags">
-    <br><input type="submit" value="Envoyer">
-</FORM> 
+ <form name="ajax" method="POST" action="">
+<div class="form-group">
+<label for="code">Code Postal:</label>
+<input type="text" size="6" class="form-control" name ="code" id="code" placeholder="Code Postal">
+</div>
+<div class="form-group">
+<label for="ville">Ville</label>
+<input type="text" class="form-control" id="ville" name ="nomVille" placeholder="Nom de la ville">
+</div>
+<button type="submit" class="btn btn-primary">Envoyer</button>
+</form>
 </body>
 </html>
